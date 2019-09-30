@@ -1,0 +1,10 @@
+<p>Mobile : {{ isMobile }}</p>
+<p>Tablet : {{ isTablet }}</p>
+<p>Desktop : {{ isDesktop }}</p>
+
+<div *ngIf="isMobile; else elseBlock">
+    <app-checkout-mobile></app-checkout-mobile>
+</div>
+<ng-template #elseBlock>
+    <app-checkout-desktop></app-checkout-desktop>
+</ng-template>
